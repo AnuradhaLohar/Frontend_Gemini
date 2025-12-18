@@ -1,0 +1,7 @@
+VITE_GEMINI_API_KEY=AIzaSyCG4lniixCeCpOcxg52iPLYqlpO231NhEM
+# VITE_BACKEND_API_URL=http://localhost:3000
+<<<<<<< HEAD:.env
+VITE_BACKEND_API_URL=https://backend-gemni.vercel.app
+=======
+VITE_BACKEND_API_URL=https://backend-gemni.vercel.app/
+>>>>>>> e49145b873e4332c773d84d37a0fe7f655e29dae:.env123
