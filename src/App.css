@@ -1,0 +1,62 @@
+.multicolor-text{
+  background: linear-gradient(0.25turn,#6e76cf,#e6649a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #353535;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #191919;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.ai-response {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e5e5e5;
+}
+
+.ai-response h1,
+.ai-response h2,
+.ai-response h3 {
+  margin-top: 1.2rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.ai-response p {
+  margin: .5rem 0;
+}
+
+.ai-response ul {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+.ai-response code {
+  background: #1e1e1e;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: .9rem;
+}
+
+.ai-response pre {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
