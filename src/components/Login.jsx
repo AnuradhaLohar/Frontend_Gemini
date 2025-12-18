@@ -5,8 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { setChats } from '../features/chatSlice';
 import { getChatsofUser } from '../services/seervies';
+import conf from '../config/conf';
+
 
 const Login = () => {
+    let BANKEND_URL = conf.backendUrl
     const [formData, setFormData] = useState({
         email: '',
         password: ''

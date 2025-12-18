@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import conf from '../config/conf'
 
 const Registration = () => {
+    let BANKEND_URL = conf.backendUrl
 
   const navigate = useNavigate()
 
