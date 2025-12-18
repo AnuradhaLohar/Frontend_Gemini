@@ -39,7 +39,7 @@ const Registration = () => {
     //post req with axios
 
     try {
-      const res = await axios.post('http://localhost:3000/api/v1/auth/register', formData)
+      const res = await axios.post(`${BANKEND_URL}/api/v1/auth/register`, formData)
       alert(res.data.message);
       if (res.data.status == 'success') {
         navigate('/login')
