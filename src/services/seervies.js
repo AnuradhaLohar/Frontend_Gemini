@@ -5,7 +5,7 @@ import conf from "../config/conf";
 
 // const GEMINI_API_KEY = 'AIzaSyCG4lniixCeCpOcxg52iPLYqlpO231NhEM'
 const GEMINI_API_KEY = conf.geminiApiKey
-const BANKEND_URL = conf.backendUrl
+// const BANKEND_URL = conf.backendUrl
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 export const getGeminiResponse = async (question) => {
@@ -40,7 +40,7 @@ export const createNewChatinDB = async (name) => {
 
 
     try {
-        const res = await axios.post(`${BANKEND_URL}/api/v1/chat/create-chat`, data, config);
+        const res = await axios.post(`/api/v1/chat/create-chat`, data, config);
         if (res.data.status == 'success') {
             return res.data.data;
         } else {
@@ -75,7 +75,7 @@ export const renameChatinDB = async (id,name) => {
 
 
     try {
-        const res = await axios.put(`${BANKEND_URL}/api/v1/chat/rename-chat`, data, config);
+        const res = await axios.put(`/api/v1/chat/rename-chat`, data, config);
         if (res.data.status == 'success') {
             return res.data.data;
         } else {
@@ -103,7 +103,7 @@ export const createNewMessageinDB = async (text, chatId, isGeminiResponse) => {
     let data = {text, chatId, isGeminiResponse }
 
     try {
-        const res = await axios.post(`${BANKEND_URL}/api/v1/message/create-message`, data, config);
+        const res = await axios.post(`/api/v1/message/create-message`, data, config);
         if (res.data.status == 'success') {
             return res.data.data;
         } else {
@@ -125,7 +125,7 @@ export const getChatsofUser = async () => {
         },
     }
     try {
-        const res = await axios.get(`${BANKEND_URL}/api/v1/chat/get-chats`, config)
+        const res = await axios.get(`/api/v1/chat/get-chats`, config)
         if (res.data.status == 'success') {
             return res.data.data
         } else {
@@ -149,7 +149,7 @@ export const getMessagesofChat = async (chatId) => {
         },
     }
     try {
-        const res = await axios.get(`${BANKEND_URL}/api/v1/message/get-all-messages/${chatId}`, config)
+        const res = await axios.get(`/api/v1/message/get-all-messages/${chatId}`, config)
         if (res.data.status == 'success') {
             return res.data.data
         } else {
@@ -173,7 +173,7 @@ export const deleteChatAndMessagsinDB = async (chatId) => {
         },
     }
     try {
-        const res = await axios.delete(`${BANKEND_URL}/api/v1/chat/delete-chat/${chatId}`, config)
+        const res = await axios.delete(`/api/v1/chat/delete-chat/${chatId}`, config)
         if (res.data.status == 'success') {
             return res.data.data
         } else {

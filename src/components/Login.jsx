@@ -9,7 +9,7 @@ import conf from '../config/conf';
 
 
 const Login = () => {
-    let BANKEND_URL = conf.backendUrl
+    // let BANKEND_URL = conf.backendUrl
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -29,7 +29,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post(`${BANKEND_URL}/api/v1/auth/login`, formData);
+            const res = await axios.post(`/api/v1/auth/login`, formData);
             alert(res.data.message);
 
             if (res.data.status === 'success') {
